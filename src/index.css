@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background-color: #15161e;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.slide {
+  box-sizing: border-box;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  position: relative;
+  background: #15161e;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  padding: 4rem;
+  font-size: 4rem;
+  color: #999999;
+}
+
+h1 {
+  color: #8bd124;
+  text-align: center;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+h3 {
+  color: #b2b2b2;
+}
+
+.slide__controls {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+}
+
+.slide__controls button {
+  font-size: 2rem;
+  color: #ffffff;
+  background: #999999;
+}
