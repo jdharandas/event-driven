@@ -1,14 +1,15 @@
 import { KeyboardEventHandler, useCallback, useState } from "react";
 import ReactFlow, { NodeMouseHandler, useReactFlow } from "reactflow";
 
-import { Slide, SlideData } from "./Slide";
+import { Slide } from "./Slide";
 import { slides, slidesToElements } from "./slides";
+import { TSlideData } from "./types";
 
 const nodeTypes = {
   slide: Slide,
 };
 
-const initialSlide = "first";
+const initialSlide = "intro0";
 const { nodes, edges } = slidesToElements(initialSlide, slides);
 
 export default function App() {
@@ -24,7 +25,7 @@ export default function App() {
         case "ArrowUp":
         case "ArrowDown":
         case "ArrowRight": {
-          const direction = event.key.slice(5).toLowerCase() as keyof SlideData;
+          const direction = event.key.slice(5).toLowerCase() as keyof TSlideData;
           const target = slide[direction];
 
           // Prevent the arrow keys from scrolling the page when React Flow is

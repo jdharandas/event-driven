@@ -1,15 +1,7 @@
 import { useCallback } from "react";
 import { Remark } from "react-remark";
 import { type NodeProps, useReactFlow } from "reactflow";
-
-export type SlideData = {
-  source: string;
-  left?: string;
-  up?: string;
-  down?: string;
-  right?: string;
-  last?: string;
-};
+import { TSlideData } from "./types";
 
 export const SLIDE_WIDTH = 1920;
 export const SLIDE_HEIGHT = 1080;
@@ -23,7 +15,7 @@ const style = {
   height: `${SLIDE_HEIGHT}px`,
 } satisfies React.CSSProperties;
 
-export function Slide({ data }: NodeProps<SlideData>) {
+export function Slide({ data }: NodeProps<TSlideData>) {
   const { source, left, up, down, right, last } = data;
   const { fitView } = useReactFlow();
 
