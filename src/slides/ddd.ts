@@ -8,8 +8,8 @@ export const getDDDSlides = (id: string, left: string, right: string): TSlide[] 
 
 ### Goal: align software design with business domain
 
-- Focus on the core domain and domain logic
-- Collaborate with domain experts to create a shared understanding of the domain
+- Focus on the business domain logic
+- Create a shared understanding of the domain (business experts + developers)
 - Use a common language (Ubiquitous Language) to describe the domain and its processes
 `,
     `
@@ -17,7 +17,7 @@ export const getDDDSlides = (id: string, left: string, right: string): TSlide[] 
     
 - **Entity**: Object defined by its identity, rather than its attr. Can be compared based on its unique ID.
 - **Value Object**: Immutable object defined by its attr., rather than its identity. Can be compared based on its attr.
-- **Aggregate**: Transactional consistency boundary protecting business logic across a common set of objects (as a single unit)..
+- **Aggregate**: Transactional **consistency boundary** protecting business logic across a common set of objects (as a single unit). Makes sure no invalid data enters the system.
 `,
     `
 # Building Blocks (II)

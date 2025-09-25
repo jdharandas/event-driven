@@ -8,6 +8,7 @@ import { getEventModelingSlides } from "./slides/event-modeling";
 import { getEventSourcingSlides } from "./slides/event-sourcing";
 import { getEventStreamingSlides } from "./slides/event-streaming";
 import { getIntroSlides } from "./slides/intro";
+import { getSagaSlides } from "./slides/saga";
 import { TSlideData } from "./types";
 
 export const slides = Object.fromEntries(
@@ -16,8 +17,9 @@ export const slides = Object.fromEntries(
     ...getEventCollaborationSlides("eventcollaboration", "intro", "eventstreaming"),
     ...getEventStreamingSlides("eventstreaming", "eventcollaboration", "eventsourcing"),
     ...getEventSourcingSlides("eventsourcing", "eventstreaming", "cqrs"),
-    ...getCQRSSlides("cqrs", "eventsourcing", "ddd"),
-    ...getDDDSlides("ddd", "cqrs", "eventmodeling"),
+    ...getCQRSSlides("cqrs", "eventsourcing", "saga"),
+    ...getSagaSlides("saga", "cqrs", "ddd"),
+    ...getDDDSlides("ddd", "saga", "eventmodeling"),
     ...getEventModelingSlides("eventmodeling", "ddd", "last"),
     ...getClosingSlides("last", "eventmodeling", "intro"),
   ].map(({ id, data }) => [id, data]),
