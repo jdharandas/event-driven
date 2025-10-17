@@ -62,6 +62,14 @@ export const getEventModelingSlides = (id: string, left: string, right: string):
 - Translate GWT and GT into unit tests
 `,
     `
+# How to start?
+
+0- Identify customer requirements: interviews
+1- Brainstorming to identify the main business processes: ordered (left to right) facts (Events)
+2- Add wireframes to visualize the user journey: UI/UX
+3- Add commands and read models: data flow. Highlight the implied data in the screens for each step.
+`,
+    `
 # Useful links
 - Martin Dilger [book](https://leanpub.com/eventmodeling-and-eventmodeling)
 `,
